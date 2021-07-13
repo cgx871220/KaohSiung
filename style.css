@@ -4,14 +4,13 @@
     font-weight: 700;
     text-align: center;
 }
-html{
-    background-image: linear-gradient(to right bottom,#00B4DB ,#0083B0 );
-    
-}
 html,body{
-    width: 100vw;
-    height: 100vh;
-    margin-bottom: -40px;
+    width: 100vw;height: 100%;
+    background-image: linear-gradient(#00B4DB ,#0083B0 );
+    background-image: no-repeat;
+}
+#app{
+    position: relative;
 }
 #app>select{
     margin:80px 0 50px;
@@ -45,8 +44,9 @@ html,body{
     height: 100%;
 }
 footer{
-    position: absolute;
-    bottom:-20px;
+    margin-top: 30px;
+    position: fixed;
+    bottom:0px;
     background-color: #000;
     color:#fff;
     left: 0;right: 0;
