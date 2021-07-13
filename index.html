@@ -11,26 +11,26 @@
     <link rel="icon" href="pic/logo.png">
 </head>
 <body>
-    <div id="app">
-        <select name="sel" id="" v-model="sel">
-            <option :value="item" v-for="(item,keys) in dataObj" :key="keys">
-                {{item.Name}}
-            </option>
-        </select>
-        <div class="wrap">
-            
-            <span>地址:{{sel.Add}}</span><br/>
-            <span>介紹:{{sel.Toldescribe}}</span>
-            <div class="map">
-                <iframe :src=`https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=${sel.Py},${sel.Px}(${sel.Name})&z=16&output=embed` allowfullscreen="false" loading="lazy"></iframe>
+    <div class="bg">
+        <div id="app">
+            <select name="sel" id="" v-model="sel">
+                <option :value="item" v-for="(item,keys) in dataObj" :key="keys">
+                    {{item.Name}}
+                </option>
+            </select>
+            <div class="wrap">
+                
+                <span>地址:{{sel.Add}}</span><br/>
+                <span>介紹:{{sel.Toldescribe}}</span>
+                <div class="map">
+                    <iframe :src=`https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=${sel.Py},${sel.Px}(${sel.Name})&z=16&output=embed` allowfullscreen="false" loading="lazy"></iframe>
+                </div>
+                
             </div>
-            
         </div>
-        <div class="clear"></div>
-    </div>
 
-    <footer>&copy;2021 GuanXian</footer>
-   
+        <footer>&copy;2021 GuanXian</footer>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.2/vue.global.js"></script>
     <script src="main.js"></script>
 </body>
